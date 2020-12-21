@@ -1137,6 +1137,8 @@ def file2passage(filename):
         del methods[0]
     elif ext == ".pickle":
         del methods[1]
+    else:
+        raise IOError("file2passage accepts only 'xml' and 'pickle' files.")
     exception = None
     for method in methods:
         try:
