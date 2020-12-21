@@ -1133,6 +1133,7 @@ def file2passage(filename):
     """
     methods = [pickle2passage, xml2passage]
     _, ext = os.path.splitext(filename)
+    ext = ext.lower()
     if ext == ".xml":
         del methods[0]
     elif ext == ".pickle":
